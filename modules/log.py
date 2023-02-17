@@ -25,3 +25,6 @@ def progressAndErrors(x, total, errorsUrls):
 
 def argumentError():
   print('Wrong quantity of arguments.')
+
+def success():
+  print('Download success!')

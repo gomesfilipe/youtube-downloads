@@ -18,6 +18,7 @@ def downloadVideoAsMP4(videoLink):
   try:
     path = '{}/{}'.format(os.getcwd(), folder)
     YouTube(videoLink).streams.filter(file_extension='mp4', progressive=True).first().download(path)
+    log.success()
   except:
     log.videoError(videoLink)
   finally:
@@ -34,6 +35,7 @@ def downloadVideoAsMP3(videoLink):
     path = '{}/{}'.format(os.getcwd(), folder)
     outFile = YouTube(videoLink).streams.filter(only_audio=True).first().download(path)
     _changeMP4ToMP3(outFile)
+    log.success()
   except:
     log.videoError(videoLink)
   finally:
@@ -68,6 +70,7 @@ def downloadPlaylistAsMP4(playlistLink):
     except:
       errors.append(url)
 
+  log.success()
   log.finish()
 
 def downloadPlaylistAsMP3(playlistLink):  
@@ -100,4 +103,5 @@ def downloadPlaylistAsMP3(playlistLink):
     except Exception as e:
       errors.append(url)
   
+  log.success()
   log.finish()

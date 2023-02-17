@@ -14,7 +14,7 @@ def videoError(url):
   print('Download error: {}'.format(url))
 
 def playlistError(url):
-  print('Error acessing playlist: {}\nIt doesn\' exists or is empty.'.format(url))
+  print('Error acessing playlist: {}\nIt doesn\' exist or is empty.'.format(url))
 
 def progressAndErrors(x, total, errorsUrls):
   os.system('clear')

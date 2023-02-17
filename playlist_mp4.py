@@ -3,7 +3,6 @@ import sys
 import modules.log as log
 
 try:
-  print(sys.argv)
   if len(sys.argv) != 2:
     raise Exception()
 

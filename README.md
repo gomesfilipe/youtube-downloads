@@ -68,7 +68,7 @@ python3 playlist_mp4.py "LINK_DO_VÍDEO"
 Exemplo:
 
 ```
-python3 video_mp4.py "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n3urOwY1foq8n"
+python3 playlist_mp4.py "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n3urOwY1foq8n"
 ```
 
 ## (IV) Download de playlist em formato mp3
@@ -80,7 +80,7 @@ python3 playlist_mp3.py "LINK_DO_VÍDEO"
 Exemplo:
 
 ```
-python3 video_mp3.py "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n3urOwY1foq8n"
+python3 playlist_mp3.py "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n3urOwY1foq8n"
 ```
 
 ## Observações:

@@ -8,16 +8,30 @@ def _changeMP4ToMP3(file):
   newFile = base + '.mp3'
   os.rename(file, newFile)
 
-def downloadVideoAsMP4(videoLink, path):
+def downloadVideoAsMP4(videoLink):
+  folder = 'mp4-downloads'
   try:
+    os.mkdir(folder)
+  except:
+    pass
+  
+  try:
+    path = '{}/{}'.format(os.getcwd(), folder)
     YouTube(videoLink).streams.filter(file_extension='mp4', progressive=True).first().download(path)
   except:
     log.videoError(videoLink)
   finally:
     log.finish()
 
-def downloadVideoAsMP3(videoLink, path):
+def downloadVideoAsMP3(videoLink):
+  folder = 'mp3-downloads'
   try:
+    os.mkdir(folder)
+  except:
+    pass
+  
+  try:
+    path = '{}/{}'.format(os.getcwd(), folder)
     outFile = YouTube(videoLink).streams.filter(only_audio=True).first().download(path)
     _changeMP4ToMP3(outFile)
   except:
@@ -25,7 +39,13 @@ def downloadVideoAsMP3(videoLink, path):
   finally:
     log.finish()
 
-def downloadPlaylistAsMP4(playlistLink, path):
+def downloadPlaylistAsMP4(playlistLink):
+  folder = 'mp4-downloads'
+  try:
+    os.mkdir(folder)
+  except:
+    pass
+  
   try:
     playlist = Playlist(playlistLink)
     totalVideos = len(playlist)
@@ -35,6 +55,7 @@ def downloadPlaylistAsMP4(playlistLink, path):
     return
     
   errors = []
+  path = '{}/{}'.format(os.getcwd(), folder)
 
   for index, url in enumerate(playlist):
     try:
@@ -45,7 +66,13 @@ def downloadPlaylistAsMP4(playlistLink, path):
 
   log.finish()
 
-def downloadPlaylistAsMP3(playlistLink, path):
+def downloadPlaylistAsMP3(playlistLink):
+  folder = 'mp4-downloads'
+  try:
+    os.mkdir(folder)
+  except:
+    pass
+  
   try:
     playlist = Playlist(playlistLink)
     totalVideos = len(playlist)
@@ -55,6 +82,7 @@ def downloadPlaylistAsMP3(playlistLink, path):
     return
   
   errors = []
+  path = '{}/{}'.format(os.getcwd(), folder)
 
   for index, url in enumerate(playlist):
     try:
@@ -64,7 +92,7 @@ def downloadPlaylistAsMP3(playlistLink, path):
     except:
       errors.append(url)
   
-  log.printFinish()
+  log.finish()
 
 # TODO
 # Ver como baixar com a maior qualidade disponível;

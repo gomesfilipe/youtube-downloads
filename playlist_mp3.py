@@ -1,4 +1,5 @@
 from downloads import downloadPlaylistAsMP3
+import sys
 
 playlistLink = "link_here"
-path = "/home/filipe/git/youtube-downloads/musics"
+downloadPlaylistAsMP3(playlistLink)

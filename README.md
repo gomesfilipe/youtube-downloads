@@ -33,7 +33,7 @@ Execute os seguintes passos para usar os scripts:
 ./install.sh
 ```
 
-Para cada uma das funcionalidades **(I)**, **(II)**, **(III)** e **(IV)** temos um arquivo associado. Assim segue abaixo comandos para cada uma delas:,
+Para cada uma das funcionalidades **(I)**, **(II)**, **(III)** e **(IV)** temos um arquivo associado. Assim, segue abaixo comandos para cada uma delas:
 
 ## (I) Download de vídeo em formato mp4
 

@@ -96,7 +96,5 @@ def downloadPlaylistAsMP3(playlistLink):
 
 # TODO
 # Ver como baixar com a maior qualidade disponível;
-# ARGC ARGV para os scripts;
-# Colocar try except nas funções; OK
-# Testar tudo;
+# Testar tudo (fazer playlist de teste);
 # Fazer README explicando como instalar as dependências e utilizar os scripts;

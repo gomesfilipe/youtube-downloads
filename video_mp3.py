@@ -1,6 +1,13 @@
 from downloads import downloadVideoAsMP3
 import sys
 
-videoLink = "https://www.youtube.com/watch?v=bRuXydQSw2Q&ab_channel=PeterBence"
+try:
+  if len(sys.argv) != 2:
+    raise Exception('Wrong quantity of arguments.')
 
-downloadVideoAsMP3(videoLink)
+  videoLink = sys.argv[1]  
+  videoLink = "https://www.youtube.com/watch?v=bRuXydQSw2Q&ab_channel=PeterBence"
+  downloadVideoAsMP3(videoLink)
+
+except Exception as error:
+  print(error)

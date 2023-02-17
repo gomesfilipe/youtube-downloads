@@ -1,7 +1,7 @@
 from pytube import YouTube
 from pytube import Playlist
 import os
-import log
+import modules.log as log
 
 def _changeMP4ToMP3(file):
   base, ext = os.path.splitext(file)
@@ -40,22 +40,26 @@ def downloadVideoAsMP3(videoLink):
     log.finish()
 
 def downloadPlaylistAsMP4(playlistLink):
-  folder = 'mp4-downloads'
-  try:
-    os.mkdir(folder)
-  except:
-    pass
-  
   try:
     playlist = Playlist(playlistLink)
     totalVideos = len(playlist)
+
+    if totalVideos == 0:
+      raise Exception()
+
   except:
     log.playlistError(playlistLink)
     log.finish()
     return
     
+  folder = 'mp4-downloads'
   errors = []
   path = '{}/{}'.format(os.getcwd(), folder)
+
+  try:
+    os.mkdir(folder)
+  except:
+    pass
 
   for index, url in enumerate(playlist):
     try:
@@ -66,35 +70,34 @@ def downloadPlaylistAsMP4(playlistLink):
 
   log.finish()
 
-def downloadPlaylistAsMP3(playlistLink):
-  folder = 'mp4-downloads'
-  try:
-    os.mkdir(folder)
-  except:
-    pass
-  
+def downloadPlaylistAsMP3(playlistLink):  
   try:
     playlist = Playlist(playlistLink)
     totalVideos = len(playlist)
+    
+    if totalVideos == 0:
+      raise Exception()
+
   except:
     log.playlistError(playlistLink)
     log.finish()
     return
-  
+
+  folder = 'mp3-downloads'
   errors = []
   path = '{}/{}'.format(os.getcwd(), folder)
 
+  try:
+    os.mkdir(folder)
+  except:
+    pass
+
   for index, url in enumerate(playlist):
     try:
-      log.printProgress(index + 1, totalVideos)
+      log.progressAndErrors(index + 1, totalVideos, errors)
       outFile = YouTube(url).streams.filter(only_audio=True).first().download(path)
       _changeMP4ToMP3(outFile)
-    except:
+    except Exception as e:
       errors.append(url)
   
   log.finish()
-
-# TODO
-# Ver como baixar com a maior qualidade disponível;
-# Testar tudo (fazer playlist de teste);
-# Fazer README explicando como instalar as dependências e utilizar os scripts;

@@ -14,7 +14,7 @@ def videoError(url):
   print('Download error: {}'.format(url))
 
 def playlistError(url):
-  print('Error acessing playlist: {}'.format(url))
+  print('Error acessing playlist: {}\nIt doesn\' exists or is empty.'.format(url))
 
 def progressAndErrors(x, total, errorsUrls):
   os.system('clear')
@@ -22,3 +22,6 @@ def progressAndErrors(x, total, errorsUrls):
 
   for url in errorsUrls:
     videoError(url)
+
+def argumentError():
+  print('Wrong quantity of arguments.')

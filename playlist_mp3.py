@@ -1,13 +1,13 @@
-from downloads import downloadPlaylistAsMP3
+from modules.downloads import downloadPlaylistAsMP3
 import sys
+import modules.log as log
 
 try:
   if len(sys.argv) != 2:
-    raise Exception('Wrong quantity of arguments.')
+    raise Exception()
 
   playlistLink = sys.argv[1]  
-  playlistLink = "link_here"
   downloadPlaylistAsMP3(playlistLink)
 
-except Exception as error:
-  print(error)
+except:
+  log.argumentError()

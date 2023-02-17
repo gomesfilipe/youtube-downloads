@@ -2,10 +2,10 @@
 
 Este repositório contém scripts com o propósito de fazer downloads de:
 
-* **(I)** Vídeos do Youtube em formato mp4;
-* **(II)** Vídeos do Youtube em formato mp3;
-* **(III)** Playlists do Youtube em formato mp4;
-* **(IV)** Playlists do Youtube em formato mp3;
+1. [Vídeos do Youtube em formato mp4](#vmp4)
+2. [Vídeos do Youtube em formato mp3](#vmp3)
+3. [Playlists do Youtube em formato mp4](#pmp4)
+4. [Playlists do Youtube em formato mp3](#pmp3)
 
 # Tecnologias utilizadas
 
@@ -27,58 +27,66 @@ Execute os seguintes passos para usar os scripts:
 
 - Clone este repositório em sua máquina;
 
-- Execute o shell script `install.sh` para instalar as dependências:
+- Instale o módulo pytube com o comando abaixo:
 
 ```
-./install.sh
+pip install pytube
 ```
 
-Para cada uma das funcionalidades **(I)**, **(II)**, **(III)** e **(IV)** temos um arquivo associado. Assim, segue abaixo comandos para cada uma delas:
+Para cada uma das funcionalidades **1**, **2**, **3** e **4** temos um arquivo associado. Assim, segue abaixo comandos para cada uma delas:
 
-## (I) Download de vídeo em formato mp4
+<div id="vmp4"/>
 
+## 1. Download de vídeo em formato mp4
+
+*Comando:*
 ```
 python3 video_mp4.py "LINK_DO_VÍDEO"
 ```
 
-Exemplo:
-
+*Exemplo:*
 ```
 python3 video_mp4.py "https://www.youtube.com/watch?v=ff8UwvPK0G4&ab_channel=vkgoeswild"
 ```
 
-## (II) Download de vídeo em formato mp3
+<div id='vmp3'/>
 
+## 2. Download de vídeo em formato mp3
+
+*Comando:*
 ```
 python3 video_mp3.py "LINK_DO_VÍDEO"
 ```
 
-Exemplo:
-
+*Exemplo:*
 ```
 python3 video_mp3.py "https://www.youtube.com/watch?v=ff8UwvPK0G4&ab_channel=vkgoeswild"
 ```
 
-## (III) Download de playlist em formato mp4
+<div id='pmp4'/>
 
+## 3. Download de playlist em formato mp4
+
+*Comando:*
 ```
 python3 playlist_mp4.py "LINK_DO_VÍDEO"
 ```
 
-Exemplo:
-
+*Exemplo:*
 ```
 python3 playlist_mp4.py "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n3urOwY1foq8n"
 ```
 
-## (IV) Download de playlist em formato mp3
+<div id='pmp3'/>
 
+## 4. Download de playlist em formato mp3
+
+*Comando:*
 ```
 python3 playlist_mp3.py "LINK_DO_VÍDEO"
 ```
 
-Exemplo:
-
+*Exemplo:*
 ```
 python3 playlist_mp3.py "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n3urOwY1foq8n"
 ```

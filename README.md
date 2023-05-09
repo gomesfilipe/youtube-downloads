@@ -101,4 +101,4 @@ python3 playlist_mp3.py "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnl
 
 # Breve demonstração de uso:
 
-<a href="link">Clique aqui</a> para ver breve demonstração do uso dos scripts em vídeo.
+<a href="https://www.youtube.com/watch?v=lzCn83Mq9os&ab_channel=FilipeGomes">Clique aqui</a> para ver breve demonstração do uso dos scripts em vídeo.

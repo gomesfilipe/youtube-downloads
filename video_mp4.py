@@ -6,7 +6,7 @@ try:
   if len(sys.argv) != 2:
     raise Exception('Wrong quantity of arguments.')
 
-  videoLink = sys.argv[1]  
+  videoLink = sys.argv[1]
   downloadVideoAsMP4(videoLink)
 
 except:

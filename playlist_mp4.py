@@ -6,7 +6,7 @@ try:
   if len(sys.argv) != 2:
     raise Exception()
 
-  playlistLink = sys.argv[1]  
+  playlistLink = sys.argv[1]
   downloadPlaylistAsMP4(playlistLink)
 
 except:

@@ -47,6 +47,5 @@ class YtDlpDownloader(Downloader):
         'noplaylist': not is_playlist,
       }
     }
-    # print(types[file_extension])
-    # exit()
+
     return types[file_extension]

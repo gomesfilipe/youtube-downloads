@@ -77,6 +77,12 @@ python3 main.py -l "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n
 python3 main.py -l "https://www.youtube.com/playlist?list=PLS0vbAcrcuiXONnlAuD5n3urOwY1foq8n" -p y -a y -d downloads
 ```
 
+# Info about Flags
+```bash
+$ python3 main.py -h
+```
+
+
 # Video Explanation
 
 <a href="https://www.youtube.com/watch?v=lzCn83Mq9os&ab_channel=FilipeGomes">Click here</a> to watch a demonstration of use this project.
